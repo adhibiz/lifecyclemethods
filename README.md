@@ -1,4 +1,4 @@
-# Ex.No:2 To create a HelloWorld Activity using all lifecycles methods to display messages.
+# Ex.No:1 To create a HelloWorld Activity using all lifecycles methods to display messages.
 
 
 ## AIM:
@@ -29,12 +29,12 @@ Step 7: Save and run the application.
 ```
 /*
 Program to print the text “Hello World”.
-Developed by:Bergin.s
-Registeration Number :212222040025
+Developed by:DHINESH R
+Registeration Number :212223220019
 */
 ```
 activity_main.xml
-```XML
+```
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -46,52 +46,25 @@ activity_main.xml
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:textSize="24sp"
+        android:text="Hello World"
+        android:textColor="#673AB7"
+        android:textColorHighlight="#0A1013"
+        android:textColorHint="#4A3F3F"
+        android:textColorLink="#2F3D43"
+        android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.179" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
 ```
-AndroidManifest.xml
-```XML
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
-
-    <application
-        android:allowBackup="true"
-        android:dataExtractionRules="@xml/data_extraction_rules"
-        android:fullBackupContent="@xml/backup_rules"
-        android:icon="@drawable/ic_launcher_foreground"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/Theme.MobileAppdemo"
-        tools:targetApi="31">
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-    </application>
-
-</manifest>
+Mainactivity.java
 ```
-MainActivity.java
-```JAVA
-package com.example.mobileappdemo;
-
-import androidx.appcompat.app.AppCompatActivity;
-
+package com.example.exp1;
 import android.os.Bundle;
 import android.widget.Toast;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -99,55 +72,63 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toast toast = Toast.makeText(getApplicationContext(),"onCreate Called",Toast.LENGTH_LONG);
+        Toast toast = Toast.makeText(getApplicationContext(), "onCreate Called", Toast.LENGTH_LONG);
         toast.show();
     }
-
-    protected void onStart(){
+    protected void onStart() {
         super.onStart();
-        Toast toast = Toast.makeText(getApplicationContext(),"onStart Called",Toast.LENGTH_LONG);
+        Toast toast = Toast.makeText(getApplicationContext(), "onStart Called", Toast.LENGTH_LONG);
         toast.show();
     }
+    @Override
 
-    protected void onRestart(){
+    protected void onRestart() {
         super.onRestart();
-        Toast toast = Toast.makeText(getApplicationContext(),"onRestart Called",Toast.LENGTH_LONG);
+        Toast toast = Toast.makeText(getApplicationContext(), "onRestart Called", Toast.LENGTH_LONG);
         toast.show();
-    }
 
-    protected void onPause(){
+    }
+    protected void onPause() {
         super.onPause();
-        Toast toast = Toast.makeText(getApplicationContext(),"onPause Called",Toast.LENGTH_LONG);
+        Toast toast = Toast.makeText(getApplicationContext(), "onPause Called", Toast.LENGTH_LONG);
         toast.show();
-    }
 
+    }
     protected void onResume(){
         super.onResume();
-        Toast toast = Toast.makeText(getApplicationContext(),"onResume Called",Toast.LENGTH_LONG);
+        Toast toast = Toast.makeText(getApplicationContext(), "onResume Called", Toast.LENGTH_LONG);
         toast.show();
-    }
 
-    protected void onStop(){
+    }
+    protected void onStop() {
         super.onStop();
-        Toast toast = Toast.makeText(getApplicationContext(),"onStop Called",Toast.LENGTH_LONG);
+        Toast toast = Toast.makeText(getApplicationContext(), "onStop Called", Toast.LENGTH_LONG);
         toast.show();
-    }
 
-    protected void onDestroy(){
+    }
+    protected void onDestroy() {
         super.onDestroy();
-        Toast toast = Toast.makeText(getApplicationContext(),"onDestroy Called",Toast.LENGTH_LONG);
+        Toast toast = Toast.makeText(getApplicationContext(), "onDestroy Called", Toast.LENGTH_LONG);
         toast.show();
+
     }
 }
 ```
 
 ## OUTPUT
-![BERNEM](https://github.com/bergin1312/lifecyclemethods/assets/119404594/5d8be11d-0104-480c-be74-a8a3eb62f74f)
-![BERBEN2](https://github.com/bergin1312/lifecyclemethods/assets/119404594/0ff4ac6e-56b0-47f1-b5ae-378c5b91af6a)
-![BERBEN3](https://github.com/bergin1312/lifecyclemethods/assets/119404594/e83f622a-4596-4e11-8f6b-3398c9e95616)
-![BERBEN4](https://github.com/bergin1312/lifecyclemethods/assets/119404594/2ab93eee-8f23-41b6-86de-5d17270eb2c9)
-![BERBEN5](https://github.com/bergin1312/lifecyclemethods/assets/119404594/cd4db55d-f6e8-4a0c-8d09-82d3b55b5647)
+![Screenshot (81)](https://github.com/KayyuruTharani/lifecyclemethods/assets/142209319/d5ad46bc-1465-456a-9cf3-d8e3f94c8eae)
 
+![Screenshot (82)](https://github.com/KayyuruTharani/lifecyclemethods/assets/142209319/2006d2ad-0051-4427-9d51-650b6cb39d8c)
+
+![Screenshot (84)](https://github.com/KayyuruTharani/lifecyclemethods/assets/142209319/cbe15bc8-62d5-4c21-9e97-783d6b2216c0)
+
+![Screenshot (66)](https://github.com/KayyuruTharani/lifecyclemethods/assets/142209319/0914167e-ec9a-4831-a64b-58da70413c2e)
+
+![Screenshot (87)](https://github.com/KayyuruTharani/lifecyclemethods/assets/142209319/4f6aabbf-5352-48c1-aa83-400252741ca6)
+
+![Screenshot (85)](https://github.com/KayyuruTharani/lifecyclemethods/assets/142209319/f482e7b7-1132-471e-8a78-aa6aa8415d01)
+
+![Screenshot (86)](https://github.com/KayyuruTharani/lifecyclemethods/assets/142209319/10ef6e61-d7f4-40b2-a817-f863e06ea9c9)
 
 
 
